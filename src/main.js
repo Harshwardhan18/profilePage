@@ -1,9 +1,22 @@
 import Vue from 'vue'
 import App from './App.vue'
-import {apolloProvider} from '../graphQL/Apollo/apollo'
+import {apolloProvider} from './graphQL/Apollo/apollo'
+import VueRouter from "vue-router"
+import {routes} from './routes'
+import BootstrapVue from 'bootstrap-vue'
+import './assets/styles/page.scss'
+
+Vue.use(BootstrapVue)
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  routes,
+  mode: "history"
+})
 
 new Vue({
   el: '#app',
+  router,
   apolloProvider,
   render: h => h(App)
 })
