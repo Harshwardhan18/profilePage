@@ -10,7 +10,15 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link": "^1.2.13",
+    "apollo-link-context": "^1.0.19",
+    "apollo-link-http": "^1.5.16",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "vue": "^2.5.11",
+    "vue-apollo": "^3.0.2"
   },
   "browserslist": [
     "> 1%",
@@ -27,6 +35,7 @@
     "file-loader": "^1.1.4",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "vue-cli-plugin-apollo": "^0.21.3",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
