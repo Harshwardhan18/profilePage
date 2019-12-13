@@ -22,7 +22,7 @@ img {
   margin-left: 96px;
 }
 .utils {
-  margin-right: 192px;
+  margin-right: 115px;
   font-size: 20px;
 }
 .bg-info {

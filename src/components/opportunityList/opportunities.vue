@@ -1,5 +1,5 @@
 <template>
-  <div class="container m-auto">
+  <div class="container new-top">
     <b-row
       v-if="
         opportunities"
@@ -15,8 +15,8 @@
             img-alt="Image"
             img-top
             tag="article"
-            style="max-width: 30rem;"
-            class="mb-4 mr-4"
+            style="max-width: 30rem; padding: 5px;"
+            class="m-4"
           >
             <b-card-text>
               <p>
@@ -25,8 +25,6 @@
               </p>
               <p><strong>Duration:</strong> {{ opp.duration }} weeks</p>
             </b-card-text>
-
-            <b-button href="#" variant="primary">Go somewhere</b-button>
           </b-card>
         </router-link>
       </div>
@@ -61,5 +59,7 @@ export default {
 };
 </script>
 <style>
-
+  .new-top {
+    margin-top: 60px;
+  }
 </style>

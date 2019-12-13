@@ -39,7 +39,12 @@
                 <div class="row spacing">
                   <h5>Organization</h5>
                 </div>
-                <div class="row spacing">
+                <div
+                  class="row spacing"
+                  v-if="
+                    opportunity.organisation && opportunity.organisation.name
+                  "
+                >
                   <p>{{ opportunity.organisation.name }}</p>
                 </div>
                 <div class="row spacing">
@@ -51,7 +56,12 @@
                 <div class="row spacing">
                   <h5>Main activities</h5>
                 </div>
-                <div>
+                <div
+                  v-if="
+                    opportunity.role_info &&
+                      opportunity.role_info.learning_points_list
+                  "
+                >
                   <ul>
                     <li
                       v-for="activity in opportunity.role_info
@@ -102,7 +112,11 @@
                 </div>
                 <div class="row lists">
                   <div><strong>Study Levels</strong></div>
-                  <div v-if="opportunity.study_levels">
+                  <div
+                    v-if="
+                      opportunity.study_levels && opportunity.study_levels.name
+                    "
+                  >
                     <ul>
                       <li v-for="study in opportunity.study_levels">
                         {{ study.name }}
@@ -128,7 +142,7 @@
                     <div>LANGUAGES</div>
                     <div class="data-field">
                       <span v-for="lang in opportunity.languages">
-                        {{lang.constant_name}}
+                        {{ lang.constant_name }}
                       </span>
                     </div>
                   </div>
@@ -175,9 +189,7 @@
                   </div>
                   <div>
                     <div>POSITIONS</div>
-                    <div
-                      class="data-field"
-                    >
+                    <div class="data-field">
                       {{ opportunity.available_openings }}
                     </div>
                   </div>
@@ -220,13 +232,10 @@ export default {
         };
       },
       update(data) {
-        console.log(data.getOpportunity);
-
         return data.getOpportunity;
       },
       error(error) {
         this.error = JSON.stringify(error.message);
-        console.log(error);
       }
     }
   },
