@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
 .slide-enter-active {
   animation: slide-in 0.2s ease-out forwards;
 }

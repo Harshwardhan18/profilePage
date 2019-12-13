@@ -10,7 +10,7 @@
           <b-badge variant="light"
             >Explore <i class="fas fa-search"></i
           ></b-badge>
-          <b-badge variant="primary">Sign Up</b-badge>
+          <b-badge variant="light">Sign Up</b-badge>
         </div>
       </b-navbar-nav>
     </b-navbar>
@@ -23,5 +23,10 @@ img {
 }
 .utils {
   margin-right: 192px;
+  font-size: 20px;
+}
+.bg-info {
+  background-color: #007bff !important;
+  opacity: 0.8;
 }
 </style>

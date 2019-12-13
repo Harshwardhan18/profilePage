@@ -5,7 +5,9 @@ import VueRouter from "vue-router"
 import {routes} from './routes'
 import BootstrapVue from 'bootstrap-vue'
 import './assets/styles/page.scss'
+import vueSmoothScroll from 'vue2-smooth-scroll'
 
+Vue.use(vueSmoothScroll)
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 
