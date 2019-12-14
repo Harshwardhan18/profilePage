@@ -27,6 +27,5 @@ img {
 }
 .bg-info {
   background-color: #007bff !important;
-  opacity: 0.8;
 }
 </style>

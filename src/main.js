@@ -13,7 +13,10 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  mode: "history"
+  mode: "history",
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+}
 })
 
 new Vue({

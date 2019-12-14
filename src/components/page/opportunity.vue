@@ -19,14 +19,14 @@
               <div class="content-links">
                 <a
                   href="#overview"
-                  v-smooth-scroll="{ duration: 1500, offset: 0 }"
+                  v-smooth-scroll="{ duration: 1500 }"
                   >Overview</a
                 >
               </div>
               <div class="content-links">
                 <a
                   href="#prerequisites"
-                  v-smooth-scroll="{ duration: 1500, offset: 0 }"
+                  v-smooth-scroll="{ duration: 1500, offset: -40 }"
                   >Prerequisites</a
                 >
               </div>
@@ -136,7 +136,7 @@
               <div class="display-logo">
                 <img src="../../assets/global-logo.png" alt="" />
               </div>
-              <div class="container">
+              <div class="container mt-3">
                 <div class="row inside-spacing">
                   <div>
                     <div>LANGUAGES</div>
@@ -186,6 +186,7 @@
                           .alphabetic_code
                       }}
                     </div>
+                    <div v-else class="data-field">Unpaid</div>
                   </div>
                   <div>
                     <div>POSITIONS</div>
