@@ -52,7 +52,7 @@
  }
  .details {
    display: grid;
-   grid-template-rows: 70px 1fr 1fr;
+   grid-template-rows: 70px 1fr 0.5fr;
    grid-template-columns: 3fr 2fr;
    padding: 10px;
 
@@ -75,6 +75,7 @@
  .prerequisites{
    grid-column: 1 / 2;
    padding: 0 30px;
+   /* max-height: 500px; */
  }
  .content-links{
    margin: 0 10px;
