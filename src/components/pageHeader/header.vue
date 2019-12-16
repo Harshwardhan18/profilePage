@@ -7,10 +7,20 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <div class="utils">
-          <b-badge variant="light"
-            >Explore <i class="fas fa-search"></i
-          ></b-badge>
-          <b-badge variant="light">Sign Up</b-badge>
+          <div>For Organisation</div>
+          <div>
+            Help |
+            <div class="explore ml-2">
+              <router-link
+                class="navbar-brand color-text"
+                active-class="active"
+                :to="{ name: 'home' }"
+              >
+                Explore <i class="fas fa-search"></i>
+              </router-link>
+            </div>
+          </div>
+          <div>Sign Up</div>
         </div>
       </b-navbar-nav>
     </b-navbar>
@@ -22,8 +32,17 @@ img {
   margin-left: 96px;
 }
 .utils {
-  margin-right: 115px;
-  font-size: 20px;
+  display: flex;
+  color: white;
+  margin-right: 96px;
+  justify-content: space-around;
+  width: 500px;
+  align-items: center;
+  font-size: 18px;
+}
+.explore {
+  display: inline-block;
+  padding: 1px 5px;
 }
 .bg-info {
   background-color: #007bff !important;

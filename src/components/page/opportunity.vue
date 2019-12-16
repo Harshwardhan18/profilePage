@@ -13,13 +13,11 @@
             <span v-else>Not Available</span>
           </div>
         </div>
-        <div class="detail-page">
+        <div class="detail-page mb-4">
           <div class="details">
             <div class="details-header">
               <div class="content-links">
-                <a
-                  href="#overview"
-                  v-smooth-scroll="{ duration: 1500 }"
+                <a href="#overview" v-smooth-scroll="{ duration: 1500 }"
                   >Overview</a
                 >
               </div>
@@ -141,8 +139,8 @@
                   <div>
                     <div>LANGUAGES</div>
                     <div class="data-field">
-                      <span v-for="lang in opportunity.languages">
-                        {{ lang.constant_name }}
+                      <span v-for="language in opportunity.languages">
+                        {{ language.constant_name }}
                       </span>
                     </div>
                   </div>
@@ -216,7 +214,8 @@ export default {
   data() {
     return {
       opportunity: {},
-      id: this.$route.params.id
+      id: this.$route.params.id,
+      count: 0
     };
   },
   watch: {

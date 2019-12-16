@@ -8,24 +8,23 @@
 </template>
 
 <script>
-import header from './components/pageHeader/header.vue'
-import queries from './graphQL/queries'
+import header from "./components/pageHeader/header.vue";
+import queries from "./graphQL/queries";
 export default {
-  name: 'app',
-  data () {
-    return {
-    }
+  name: "app",
+  data() {
+    return {};
   },
   components: {
-    appHeader : header
+    appHeader: header
   }
-}
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 * {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .slide-enter-active {
   animation: slide-in 0.2s ease-out forwards;

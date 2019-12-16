@@ -1,9 +1,6 @@
 <template>
   <div class="container new-top">
-    <b-row
-      v-if="
-        opportunities"
-    >
+    <b-row v-if="opportunities">
       <div v-for="opp in opportunities" :key="opp.id">
         <router-link
           :to="'/profile/' + opp.id"
@@ -52,14 +49,14 @@ export default {
     }
   },
   methods: {
-    changeDateFormat(val){
-      return moment(val).format("DD MMM YYYY")
+    changeDateFormat(val) {
+      return moment(val).format("DD MMM YYYY");
     }
   }
 };
 </script>
 <style>
-  .new-top {
-    margin-top: 60px;
-  }
+.new-top {
+  margin-top: 60px;
+}
 </style>
