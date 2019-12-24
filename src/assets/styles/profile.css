@@ -73,7 +73,6 @@ a:hover {
 .prerequisites {
   grid-column: 1 / 2;
   padding: 0 30px;
-  /* max-height: 500px; */
 }
 .content-links {
   margin: 0 10px;

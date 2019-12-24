@@ -138,9 +138,9 @@
                 <div class="row inside-spacing">
                   <div>
                     <div>LANGUAGES</div>
-                    <div class="data-field">
+                    <div class="data-field" v-if="opportunity.languages">
                       <span v-for="language in opportunity.languages">
-                        {{ language.constant_name }}
+                        {{language.constant_name}}
                       </span>
                     </div>
                   </div>
@@ -242,6 +242,17 @@ export default {
   methods: {
     changeDateFormat(val) {
       return moment(val).format("DD MMM YYYY");
+    },
+    addComma(val) {
+      console.log(this.opportunity);
+
+      console.log(this.opportunity.languages.length);
+      if(this.opportunity.languages.length>1){
+        for(let i=0;i<=this.opportunity.languages.length-2;i++){
+          return val + ",";
+        }
+      }
+      return val;
     }
   }
 };

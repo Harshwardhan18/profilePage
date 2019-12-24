@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 const GET_OPPORTUNITIES = gql`
-  query getOpportunities {
-    allOpportunity(only: "") {
+  query getOpportunities($filter: OpportunityFilter) {
+    allOpportunity(filters: $filter) {
       data {
         id
         title
@@ -46,14 +46,6 @@ const GET_OPPORTUNITY = gql`
         }
         constant_name
       }
-      selection_processes {
-        edges {
-          node {
-            title
-            no_of_days
-          }
-        }
-      }
       languages {
         constant_name
       }
@@ -69,8 +61,42 @@ const GET_OPPORTUNITY = gql`
     }
   }
 `;
+const GET_BACKGROUNDS = gql`
+  query {
+    backgrounds: allConstants(type_id: "background") {
+      id
+      name
+    }
+  }
+`;
+const GET_SKILLS = gql`
+  query {
+    skills: allConstants(type_id: "skill") {
+      id
+      name
+    }
+  }
+`;
+
+const GET_LANGUAGES = gql`query {
+      languages: allConstants(type_id:"language"){
+        id
+          name
+      }
+      }`;
+
+const GET_COUNTRIES = gql`query {
+        countries: allConstants(type_id:"country"){
+          id
+          name
+        }
+        }`;
 
 export default {
   GET_OPPORTUNITIES,
-  GET_OPPORTUNITY
+  GET_OPPORTUNITY,
+  GET_SKILLS,
+  GET_LANGUAGES,
+  GET_COUNTRIES,
+  GET_BACKGROUNDS
 };
