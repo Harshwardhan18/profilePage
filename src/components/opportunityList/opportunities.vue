@@ -1,6 +1,21 @@
 <template>
   <div class="container new-top">
-    <div class="filterDiv">
+    <div class="filterDiv mb-4">
+      <!-- <div class="location filter">
+        <multiselect
+          v-model="location"
+          :options="locOptions"
+          :searchable="false"
+          :close-on-select="false"
+          :show-labels="false"
+          @select="getLocation"
+          @remove="remLoc"
+          label="name"
+          :multiple="true"
+          trackBy="name"
+          placeholder="Location"
+        ></multiselect>
+      </div> -->
       <div class="skills filter">
         <multiselect
           v-model="skills"
@@ -172,9 +187,25 @@ export default {
       this.filterData.skillsId = this.skill;
       this.refetchQuery();
     },
+    // getLocation(val) {
+    //   this.loca.push(+val.id);
+    //   this.filterData.locationId = this.loca;
+    //   this.refetchQuery();
+    // },
+    // remLoc(val) {
+    //   let i = this.loca.indexOf(Number(val.id));
+    //   if (i > -1) {
+    //     this.loca.splice(i, 1);
+    //   }
+    //   if (this.loca.length > 0) {
+    //     this.filterData.locationId = this.loca;
+    //   } else {
+    //     this.filterData.locationId = null;
+    //   }
+    //   this.refetchQuery();
+    // },
     remLang(val) {
       let i = this.lang.indexOf(Number(val.id));
-      console.log(i, "askfdba");
       if (i > -1) {
         this.lang.splice(i, 1);
       }
@@ -215,6 +246,7 @@ export default {
           background_ids: this.filterData.backgroundId,
           language_ids: this.filterData.langId,
           skill_ids: this.filterData.skillsId
+          // home_mcs
         }
       });
     }
@@ -240,5 +272,8 @@ export default {
 .filter {
   width: 120px;
   margin: 5px 50px;
+}
+.row{
+  margin-top: 90px;
 }
 </style>
